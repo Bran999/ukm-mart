@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('KategoriProduk', 'KategoriProdukController');
+Route::resource('Produk', 'ProdukController');
+Route::get('/produk', 'Produkcontroller@index');
+Route::post('/produk/store', 'Produkcontroller@store');
+Route::get('/pegawai/edit/{id}', 'Produkcontroller@edit');
+Route::post('pegawai/update', 'Produkcontroller@update');
+Route::get('/pegawai/destroy/{id}', 'Produkcontroller@destroy');
